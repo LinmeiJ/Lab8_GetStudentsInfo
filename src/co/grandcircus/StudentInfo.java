@@ -1,5 +1,5 @@
 package co.grandcircus;
-
+/*********** @Author: Linmei Mills ***********/
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
