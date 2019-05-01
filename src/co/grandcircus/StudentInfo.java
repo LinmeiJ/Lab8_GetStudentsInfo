@@ -37,9 +37,6 @@ public class StudentInfo {
 
 	public static void getStudentInfo(Scanner sc, int num, String[] studentsName, String[] hometown,
 			String[] favoriteFood, String[] favoriteColor) {
-
-//		System.out.println(userInput);
-//		System.out.println(userInput.matches("\\bhometown\\b|\\bfavorite food\\b"));
 		while (sc.hasNextLine()) {
 			sc.nextLine();
 			System.out.println("Student " + num + " is " + studentsName[num - 1] + ","
