@@ -35,8 +35,9 @@ public class StudentInfo {
 
 	}
 
-	public static void getStudentInfo(Scanner sc, int num, String[] studentsName, String[] hometown,
-			String[] favoriteFood, String[] favoriteColor) {
+	public static void getStudentInfo(Scanner sc, int num, String[] studentsName, String[] hometown, String[] favoriteFood, 
+					  String[] favoriteColor) {
+		
 		while (sc.hasNextLine()) {
 			sc.nextLine();
 			System.out.println("Student " + num + " is " + studentsName[num - 1] + ","
@@ -44,23 +45,21 @@ public class StudentInfo {
 					+ "(Enter \"hometown\" , \"favorite food\", or \"favorite color\")");
 			String userInput = sc.nextLine();
 			userInput = userInput.toLowerCase();
+			
 			try {
 				if (userInput.matches("\\bhometown\\b|\\bfavorite food\\b|\\bfavorite color\\b")) {
 					if (userInput.equals("hometown")) {
 						System.out.println(studentsName[num - 1] + " is from " + "" + hometown[num - 1] + ".");
 						break;
 					} else if (userInput.matches("\\bfavorite food\\b")) {
-						System.out
-								.println(favoriteFood[num - 1] + " is " + studentsName[num - 1] + "'s favorite food.");
+						System.out.println(favoriteFood[num - 1] + " is " + studentsName[num - 1] + "'s favorite food.");
 						break;
 					} else {
-						System.out.println(
-								favoriteColor[num - 1] + " is " + studentsName[num - 1] + "'s favorite color.");
+						System.out.println(favoriteColor[num - 1] + " is " + studentsName[num - 1] + "'s favorite color.");
 						break;
 					}
 				}
 				throw new InputMismatchException("Invalid entry.");
-
 			} catch (InputMismatchException e) {
 				System.out.println(e.getMessage());
 				System.out.println("That data doesn't exist.");
