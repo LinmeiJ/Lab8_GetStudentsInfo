@@ -25,7 +25,7 @@ public class StudentInfo {
 			} catch (IllegalArgumentException e) {
 				System.out.println("That is not a number.");
 			} catch (Exception e) {
-				System.out.println("An unknown error occurred.");
+				System.out.println("An unknown error occurred. You might entered something else rather than an integer, please try enter just 1-6.");
 			}
 
 			System.out.println("Continue?(y/n): ");
